@@ -62,23 +62,26 @@
 #xact-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 16px;
-  height: 52px;
+  gap: 8px;
+  padding: 0 12px;
+  height: 48px;
+  min-height: 48px;
   background: var(--accent);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 #xact-logo-pulse {
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 5px;
   background: rgba(255,255,255,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   color: #fff;
   letter-spacing: -0.5px;
@@ -88,42 +91,54 @@
 
 #xact-header-info {
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 #xact-header-info h2 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #ffffff;
   font-family: var(--font-ui);
   margin: 0;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 #xact-header-info p {
-  font-size: 10px;
+  font-size: 9.5px;
   color: rgba(255,255,255,0.7);
   font-family: var(--font-ui);
-  margin: 0;
+  margin: 2px 0 0;
   font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 #xact-header-controls {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  flex-shrink: 0;
 }
 
 #xact-course-select {
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 10px;
   background: rgba(255,255,255,0.18);
   border: 1px solid rgba(255,255,255,0.3);
   color: #ffffff;
   border-radius: 6px;
-  padding: 4px 8px;
+  padding: 3px 6px;
   cursor: pointer;
   outline: none;
   transition: background .2s;
-  max-width: 120px;
+  max-width: 100px;
+  white-space: nowrap;
 }
 #xact-course-select option {
   background: #1a9fe0;
@@ -141,9 +156,11 @@
   border: 1px solid rgba(255,255,255,0.4);
   background: rgba(255,255,255,0.15);
   border-radius: 4px;
-  padding: 3px 6px;
+  padding: 2px 5px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 #xact-close {
